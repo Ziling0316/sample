@@ -1,0 +1,1 @@
+[20230606] Fix the bug of when end game, all node have same color will judge as draw

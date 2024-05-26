@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "sample-dl"
+version = "0.1.0"
+description = ""
+authors = ["amy <jolin51120@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+websocket-client = "0.59.0"
+google-auth-oauthlib = "0.4.3"
+numpy = "^1.26.4"
+tensorflow = "^2.16.1"
+matplotlib = "^3.9.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
