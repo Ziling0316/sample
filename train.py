@@ -11,9 +11,9 @@ BOARD_SIZE=10
 
 bot=BOT(board_size=BOARD_SIZE)
 args={
-    'num_of_generate_data_for_train': 128,
+    'num_of_generate_data_for_train': 256,
     'epochs': 50,
-    'batch_size': 20,
+    'batch_size': 10,
     'verbose': True
 }
 bot.self_play_train(args)
