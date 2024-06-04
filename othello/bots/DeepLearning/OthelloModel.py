@@ -119,14 +119,8 @@ class OthelloModel():
         x = resnet
 
         for i in range(5):
-            # if(i == 0):
-            #     resnet = self.resnet_layer(inputs = x, num_filter = 256,strides=2)
-            #     resnet = self.resnet_layer(inputs = resnet, num_filter = 256, activation = None)
-            # else:
             resnet = self.resnet_layer(inputs = x, num_filter = 256)
             resnet = self.resnet_layer(inputs = resnet, num_filter = 256, activation = None)
-            # if(i == 0):
-            #     x = self.resnet_layer(inputs = x, num_filter = 256, strides=2)
             resnet = add([resnet, x])
             resnet = Activation('relu')(resnet)
             x = resnet
@@ -139,30 +133,12 @@ class OthelloModel():
         x = resnet
 
         for i in range(2):
-            # if(i == 0):
-            #     resnet = self.resnet_layer(inputs = x, num_filter = 512,strides=2)
-            #     resnet = self.resnet_layer(inputs = resnet, num_filter = 512, activation = None)
-            # else:
             resnet = self.resnet_layer(inputs = x, num_filter = 512)
             resnet = self.resnet_layer(inputs = resnet, num_filter = 512, activation = None)
-            # if(i == 0):
-            #     x = self.resnet_layer(inputs = x, num_filter = 512, strides=2)
             resnet = add([resnet, x])
             resnet = Activation('relu')(resnet)
             x = resnet
-        
-        # for i in range(2):
-        #     if(i == 0):
-        #         resnet = self.resnet_layer(inputs = x, num_filter = 512,strides=2)
-        #         resnet = self.resnet_layer(inputs = resnet, num_filter = 512, activation = None)
-        #     else:
-        #         resnet = self.resnet_layer(inputs = x, num_filter = 512)
-        #         resnet = self.resnet_layer(inputs = resnet, num_filter = 512, activation = None)
-        #     if(i == 0):
-        #         x = self.resnet_layer(inputs = x, num_filter = 512, strides=2)
-        #     resnet = add([resnet, x])
-        #     resnet = Activation('relu')(resnet)
-        #     x = resnet
+
         return x
 
 
